@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    
+    <! –– .・。.・゜✭・ Añadiendo fonts ・✫・゜・。. ––>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+<! –– .・。.・゜✭・ Barra de navegación ・✫・゜・。. ––>
+    <nav class="barraTop">
+        <div class="group">
+            <a href="index.html" class=itemTitle><img src="media/logoBlanco.png" alt="logo del sitio web THREE SIXTY"></a>
+        </div>
+        <div class="group">
+            <a href="index.html" class="item">log in</a>
+            <a href="index.html" class="item">register</a>
+        </div>
+    </nav>
+<! –– .・。.・゜✭・ FIN de Barra de Navegación ・✫・゜・。. ––>
+    
+    <main>
+<! –– .・。.・゜✭・ Bold statement ・✫・゜・。. ––>
+        <img src="media/header.png" alt="alt text" class="centrado">
+        
+        <h3>STYLE IS</h3>
+        <h1><div id="texto-cambiante">SELF EXPRESSION</div></h1>
+        
+        <script>
+            const textos = ["SELF EXPRESSION", "EVERYTHING", "THREE SIXTY"];
+            let indice = 0;
+            function cambiarTexto() {
+                const elemento = document.getElementById('texto-cambiante');
+                elemento.textContent = textos[indice];
+                indice = (indice + 1) % textos.length;
+            }
+            setInterval(cambiarTexto, 2000);
+        </script>
+<! –– .・。.・゜✭・ FIN de Bold statement ・✫・゜・。. ––> 
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

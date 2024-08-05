@@ -1,0 +1,60 @@
+body {
+    background-color: #1C160A;
+    margin: 60;
+    padding: 0;
+}
+
+h1{
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 64px;
+}
+
+h3{
+    font-family: "Space Grotesk", sans-serif;
+    font-style: normal;
+    color: white;
+    font-size: 48px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.barraTop {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.item {
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 18px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 30px 16px 30px 16px;
+}
+
+
+
+div.group:last-child {
+    margin-right: 44px;
+}
+
+.itemTitle {
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 30px 60px 30px 60px;
+    display: block;
+}
+
+.item:hover {
+  text-decoration: underline;
+}
+
+.centrado {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

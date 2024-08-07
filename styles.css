@@ -8,15 +8,39 @@ h1{
     color: white;
     font-family: "Red Hat Display", sans-serif;
     font-size: 64px;
+    margin: 0;
 }
 
-h3{
-    font-family: "Space Grotesk", sans-serif;
-    font-style: normal;
+h2{
     color: white;
+    font-family: "Red Hat Display", sans-serif;
     font-size: 48px;
-    display: inline-block;
-    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+h4{
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 32px;
+    font-weight: 400;
+  display: inline-block;
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 18px;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 .barraTop {
@@ -36,9 +60,7 @@ h3{
   padding: 30px 16px 30px 16px;
 }
 
-
-
-div.group:last-child {
+.item:last-child {
     margin-right: 44px;
 }
 
@@ -57,4 +79,52 @@ div.group:last-child {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.boldSatement {
+  position: relative;
+  width: auto;
+}
+
+.textoSobreImg {
+  position: absolute;
+  top: 78%; /* Ajusta según donde quieras el texto verticalmente */
+  text-align: left;
+  padding-left: 60px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1900px; /* Ajusta esto según tus necesidades */
+  margin: 0 auto;
+}
+    
+.column {
+  padding: 20px;
+}
+    
+.textColumnLeft {
+  flex: 1; /* Esto hará que ocupe 1/3 del espacio */
+}
+
+ .imageColumnLeft {
+  flex: 2; /* Esto hará que ocupe 2/3 del espacio */
+}   
+    
+
+.enlace {
+  display: flex;      
+    }
+
+h3{
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  font-size: 48px;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+    padding: 0;
 }

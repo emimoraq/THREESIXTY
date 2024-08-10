@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360</title>
+    
+    <!-- .・。.・゜✭・ Añadiendo fonts ・✫・゜・。. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+</head>
+    
+<body>
+<!-- .・。.・゜✭・ Barra de navegación ・✫・゜・。. -->
+    <nav class="barraTop">
+        <div class="group">
+            <a href="index.html" class=itemTitle><img src="media/logoBlanco.png" alt="logo del sitio web THREE SIXTY"></a>
+        </div>
+        <div class="group">
+            <a href="index.html" class="item">log in</a>
+            <a href="index.html" class="item">register</a>
+        </div>
+    </nav>
+<!--  .・。.・゜✭・ FIN de Barra de Navegación ・✫・゜・。. -->
+    
+    <main>
+<!-- .・。.・゜✭・ Bold statement ・✫・゜・。.-->
+    <div class="boldStatement">
+        <img src="media/header.png" alt="alt text" class="centrado">
+      <div class=textoSobreImg>
+        <h3>CLOTHING IS</h3>
+        <h1><div id="texto-cambiante">SELF EXPRESSION</div></h1>
+      </div>
+        <script>
+            const textos = ["SELF EXPRESSION", "EVERYTHING", "THREE SIXTY"];
+            let indice = 0;
+            function cambiarTexto() {
+                const elemento = document.getElementById('texto-cambiante');
+                elemento.textContent = textos[indice];
+                indice = (indice + 1) % textos.length;
+            }
+            setInterval(cambiarTexto, 2000);
+        </script>
+    </div>
+<!--  .・。.・゜✭・ FIN de Bold statement ・✫・゜・。. -->
+
+<!--  .・。.・゜✭・ Trio de texto + img ・✫・゜・。. -->
+    <div class="container">
+        <div class="textColumnLeft">
+            <div class="group">
+                <h2>DISCOVER</h2>
+                <h4>NEW TRENDS</h4>
+            </div>
+            
+            <a class="enlace" href="index.html">
+                <div class="group">
+                    <h5>log in</h5>
+                    <img src="media/flechaEnlace.png" alt="Flecha que señaliza enlace">
+                </div>
+            </a>  
+        </div>
+    <div class="imageColumnLeft">
+        <img src="media/img1.png" alt="Descripción de la imagen">
+    </div>
+</div>
+        
+<!--  .・。.・゜✭・ FIN de Trio de texto + img ・✫・゜・。. -->
+  
+
+
+<!--  .・。.・゜✭・ Outfit inspiration ・✫・゜・。. -->    
+
+<div class="container">
+    <div class="Header">
+        <h2>DISCOVER</h2>
+        <h5>log in</h5>
+    </div>
+    <div class="article">
+        <img src="media/STARBAG.png" alt="Descripción de la imagen">
+    </div>
+    <div class="button">
+        <h2>DISCOVER</h2>
+        <h5>log in</h5>
+    </div>
+    <div class="Interactivo"> <!-- Container for the image and carousel -->
+        <div class="carousel-container"> <!-- Wrapper for image and UI -->
+            <img src="media/BAGGIRL.png" alt="Image with hotspots" class="interactive-image">
+            
+            <!-- Carousel controls -->
+            <div class="carousel-controls">
+                <span class="prev">&#10094;</span>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <span class="next">&#10095;</span>
+            </div>
+        </div>
+        
+        <!-- Hotspots remain inside Interactivo -->
+        <div class="hotspot-overlay"> 
+            <!-- Hotspot 1 -->
+            <a href="link1.html" class="hotspot hotspot-1" style="top: 15%; left: 38%; width: 25%; height: 12%;"></a>
+            
+            <!-- Hotspot 2 -->
+            <a href="link2.html" class="hotspot hotspot-2" style="top: 63%; left: 15%; width: 30%; height: 23%;"></a>
+        </div>
+    </div>
+    
+    
+    <div class="Image-1">
+        <img src="media/REDBAG.png" alt="Descripción de la imagen">
+    </div>
+        
+    <div class="Image-2">
+        <img src="media/GREENBAG.png" alt="Descripción de la imagen">
+    </div>
+  
+
+</div>
+
+
+</main>
+    
+    <footer>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+    <script src="hoverchange.js"></script>
+</body>
+</html>

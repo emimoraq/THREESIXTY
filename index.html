@@ -53,31 +53,67 @@
     </div>
 <! –– .・。.・゜✭・ FIN de Bold statement ・✫・゜・。. ––> 
 
-<! –– .・。.・゜✭・ Trio de texto + img ・✫・゜・。. ––> 
-    <div class="container">
-        <div class="textColumnLeft">
-            <div class="group">
-                <h2>DISCOVER</h2>
-                <h4>NEW TRENDS</h4>
+
+<! –– .・。.・゜✭・ Sign Up ・✫・゜・。. ––>
+    <div class=preSignUp><h4>JOIN THE THREE SIXTY CLUB</h4></div>
+    
+    <section class="layout">
+        <div class="imagenSignUp">
+            <img src="media/imgSignUp.png" alt="Black and white image of a man with a mustache and sun glasses over a plain white background">
+        </div>
+        
+        <div class="formSignUp">
+            <div class=itemTitle>
+                <img src="media/logoBlanco.png" alt="logo del sitio web THREE SIXTY">
             </div>
             
-            <a class="enlace" href="index.html">
-                <div class="group">
-                    <h5>log in</h5>
-                    <img src="media/flechaEnlace.png" alt="Flecha que señaliza enlace">
-                </div>
-            </a>  
-        </div>
-    <div class="imageColumnLeft">
-        <img src="media/img1.png" alt="Descripción de la imagen">
-    </div>
-</div>
-        
-<! –– .・。.・゜✭・ FIN de Trio de texto + img ・✫・゜・。. ––> 
-    </main>
-    
+            <div class=incitingStatement>
+                <div class=h4fontAlt>SIGN UP</div>
+                <div><h4>AND NEVER MISS A BEAT</h4></div>
+            </div>
+            
+            <button class="botonIcono">
+                <span class="elemento-izquierda"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cc7c7b48eacd3c337326c01fa56fb58d0c785e31282d29ecefc520e5a79776d?placeholderIfAbsent=true&apiKey=d21bf5150901427d88a3f70d8a0a395f" alt="Google logo"></span>
+                <span class="elemento-centro">Continue using Google</span>
+            </button>
+            
+            <div class=separador>or</div>
+            
+            <input type="email" id="email" name="email" placeholder="stylish@email.com">
+            
+            <button id="submit-btn" disabled>Continue with email</button>
+            <script>
+            const emailInput = document.getElementById('email');
+            const submitBtn = document.getElementById('submit-btn');
 
+            function validateEmail(email) {
+              const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return re.test(email);
+            }
+
+            emailInput.addEventListener('input', function() {
+              if (validateEmail(this.value)) {
+                submitBtn.disabled = false;
+              } else {
+                submitBtn.disabled = true;
+              }
+            });
+            </script>
+            
+            <div class="terms-agreement">
+              By singing up you agree to our
+              <span class="terms-link" tabindex="0">Terms of Use</span>,
+              <span class="terms-link" tabindex="0">Privacy Notice</span>
+              and
+              <span class="terms-link" tabindex="0">Cookie Notice</span>.
+            </div>
+        </div>
+    </section>
+        
+<! –– .・。.・゜✭・ FIN de Sign Up ・✫・゜・。. ––>
     
+    </main>
+ 
     <footer>
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
     </footer>

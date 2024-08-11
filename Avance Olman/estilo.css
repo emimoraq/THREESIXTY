@@ -165,7 +165,16 @@ body {
 
 .article { grid-area: article; }
 
-.button { grid-area: button; }
+.button { 
+  grid-area: button;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns content to the bottom */
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: left; /* Ensures text aligns to the left */
+    padding: 20px; /* Adds some padding for spacing */
+
+}
 
 .Interactivo { grid-area: Interactivo;
 
@@ -176,18 +185,18 @@ body {
 .Image-2 { grid-area: Image-2; 
 }
 
-/*/* Debugging colors */
+/*/* Debugging colors 
 .container .Header {
-  background-color: rgba(251, 12, 231, 0.5); /* Red */
+  background-color: rgba(251, 12, 231, 0.5); 
 }
 
-.container .article {
-  background-color: rgba(0, 255, 0, 0.5); /* Green */
-}
+/*.container .article {
+  background-color: rgba(0, 255, 0, 0.5);
+}*/
 
-.container .button {
-  background-color: rgba(0, 0, 255, 0.5); /* Blue */
-}
+/*.container .button {
+  background-color: rgba(0, 0, 255, 0.5); /* Blue 
+}*/
 
 .container .Interactivo {
   background-color: #333330; /* Yellow */
@@ -300,4 +309,94 @@ body {
 
 .hotspot.hotspot-2:hover ~ .interactive-image {
     opacity: 0;
+}
+
+.header-title {
+  color: #FFF;
+  font-family: "Space Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.header-subtitle {
+  color: #FFF;
+  font-family: "Space Grotesk";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.article-name{
+  color: #FFF;
+  font-family: "Red Hat Display";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0; /* Removes any default margin */
+  line-height: 1.2; /* Adjusts line-height for spacing between lines */
+
+}
+.big-link {
+  display: inline-flex; /* Aligns the text and icon horizontally */
+  align-items: center; /* Vertically centers the icon with the text */
+  color: #FFF;
+  font-family: "Space Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  margin-top: 10px; /* Adds space between the text and the link */
+
+}
+
+.big-link svg {
+  margin-left: 20px; /* Adds space between the text and the icon */
+  fill: white; /* Ensures the icon color matches the text */
+  width: 40px; /* Adjusts icon size */
+  height: 40px; /* Adjusts icon size */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  margin-top: 15px;
+  padding: 0 20px; /* Adjust padding as needed */
+  background-color: #333; /* Example background color */
+  color: white;
+  box-sizing: border-box;
+}
+
+.footer-left {
+  display: flex;
+  gap: 20px; /* Space between elements */
+}
+
+.footer-left a {
+  text-decoration: none;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between words and icons */
+}
+
+.footer-right span {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+}
+
+.footer-right a img {
+  width: 20px; /* Adjust size of the icons */
+  height: 20px;
 }

@@ -10,7 +10,7 @@ function changeImageOnHover(hotspot, newImage) {
     });
 
     hotspot.addEventListener('mouseleave', () => {
-        interactiveImage.src = 'media/BAGGIRL.png'; // Replace with the original image path
+        interactiveImage.src = 'media/INTERACTIVO.png'; // Replace with the original image path
         interactiveImage.style.opacity = '1';
     });
 }

@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
     
 <body>
@@ -79,19 +82,25 @@
 
 <div class="container">
     <div class="Header">
-        <h2>DISCOVER</h2>
-        <h5>log in</h5>
+            <h1 class="header-title">in with the NEW</h1>
+            <h2 class="header-subtitle">Pick an article and get some inspo</h2>
     </div>
     <div class="article">
         <img src="media/STARBAG.png" alt="Descripción de la imagen">
     </div>
     <div class="button">
-        <h2>DISCOVER</h2>
-        <h5>log in</h5>
+        <h1 class="article-name">URBANCODE <br> leather bag</h1>
+        <a href="index.html" class="big-link">
+            MORE OUTFITS
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M10 19l-1.41-1.41L15.17 11H4v-2h11.17l-6.58-6.59L10 1l9 9-9 9z" fill="#FFFFFF"/>
+            </svg>
+        </a>
+        
     </div>
     <div class="Interactivo"> <!-- Container for the image and carousel -->
         <div class="carousel-container"> <!-- Wrapper for image and UI -->
-            <img src="media/BAGGIRL.png" alt="Image with hotspots" class="interactive-image">
+            <img src="media/INTERACTIVO.png" alt="Image with hotspots" class="interactive-image">
             
             <!-- Carousel controls -->
             <div class="carousel-controls">
@@ -130,10 +139,24 @@
 
 
 </main>
-    
-    <footer>
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
-    </footer>
-    <script src="hoverchange.js"></script>
+    <footer class="footer-container">
+            <div class="footer-left">
+                <a href="#">THREE SIXTY</a>
+                <a href="#">© 2024</a>
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="footer-right">
+                <span>About</span>
+                <span>Careers</span>
+                <span>Contact</span>
+                <span>Press</span>
+                <a href="#"><img src="media/IG.svg" alt="Icon 1"></a>
+                <a href="#"><img src="media/FACEBOOK.svg" alt="Icon 2"></a>
+                <a href="#"><img src="media/X.svg" alt="Icon 3"></a>
+            </div>
+        </footer>
+        
+    <script src="cutbutton.js"></script>
 </body>
 </html>

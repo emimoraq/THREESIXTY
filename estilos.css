@@ -103,11 +103,11 @@ box-sizing: border-box;
 
 .contenedor-imagen {
   width: 100%;
-  height: 650px;
+  height: auto;
   overflow: hidden;
 }
 
-.imagen {
+.imagen_Header {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -427,7 +427,7 @@ box-sizing: border-box;
   line-height: normal;
   margin: 0; /* Removes any default margin */
   line-height: 0; /* Adjusts line-height for spacing between lines */
-  padding: 40px;
+  padding: 70px;
   text-align: left;
 
 }
@@ -441,7 +441,7 @@ box-sizing: border-box;
   line-height: normal;
   margin: 0; /* Removes any default margin */
   line-height: 0; /* Adjusts line-height for spacing between lines */
-  padding: 40px;
+  padding: 70px;
   text-align: right;
 
 }
@@ -512,7 +512,7 @@ box-sizing: border-box;
 
 /* SOCIALS */
   .seccion-fotografias {
-  padding: 40px 0; /* Espacio superior e inferior */
+  padding: 70px 0; /* Espacio superior e inferior */
   text-align: right; /* Centra el título y el contenido */
   margin-top: 50px; /* Espacio entre la sección anterior y esta sección */
 }
@@ -601,6 +601,13 @@ box-sizing: border-box;
 .imagenSignUp { 
     grid-area: imagenSignUp; 
     
+}
+
+.imagenSignUp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Removes any gaps or extra space */
 }
 
 .formSignUp { 

@@ -441,7 +441,7 @@ box-sizing: border-box;
   line-height: normal;
   margin: 0; /* Removes any default margin */
   line-height: 0; /* Adjusts line-height for spacing between lines */
-  padding: 70px;
+  padding: 40px;
   text-align: right;
 
 }

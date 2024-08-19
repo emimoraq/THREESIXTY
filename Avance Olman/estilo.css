@@ -121,11 +121,10 @@ box-sizing: border-box;
   padding-left: 60px;
 }  
     
-
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Distributes the grid evenly */
-  grid-template-rows: 50% 450px 284px; /* Adjust rows automatically */
+  grid-template-rows: auto auto auto; /* Adjust rows automatically */
   gap: 20px 50px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -139,56 +138,43 @@ box-sizing: border-box;
   overflow-x: hidden; /* Prevent overflow */
 }
 
+.container > div {
+  min-width: 0; /* Allows columns to shrink beyond their content size */
+}
 
 .Header { grid-area: Header; }
 
-.article { grid-area: article; }
+.article { 
+  grid-area: article;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  text-align: center; /* Centers text content */
+  word-wrap: break-word; /* Ensures long text breaks correctly */
+}
+
+.article img {
+  max-width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures the image scales while preserving its aspect ratio */
+  display: block; /* Removes any gaps or extra space */
+}
 
 .button { 
   grid-area: button;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Aligns content to the bottom */
-    align-items: flex-start; /* Aligns content to the left */
-    text-align: left; /* Ensures text aligns to the left */
-    padding: 20px; /* Adds some padding for spacing */
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Aligns content to the bottom */
+  align-items: flex-start; /* Aligns content to the left */
+  text-align: left; /* Ensures text aligns to the left */
+  padding: 20px; /* Adds some padding for spacing */
 }
 
-.Interactivo { grid-area: Interactivo;
-
-}
+.Interactivo { grid-area: Interactivo; }
 
 .Image-1 { grid-area: Image-1; }
 
-.Image-2 { grid-area: Image-2; 
-}
-
-/*/* Debugging colors 
-.container .Header {
-  background-color: rgba(251, 12, 231, 0.5); 
-}
-
-/*.container .article {
-  background-color: rgba(0, 255, 0, 0.5);
-}*/
-
-/*.container .button {
-  background-color: rgba(0, 0, 255, 0.5); /* Blue 
-}*/
-
-.container .Interactivo {
-  background-color: #333330; /* Yellow */
-}
-
-.container .Image-1 {
-  background-color: rgba(255, 0, 255, 0.5); /* Magenta */
-}
-
-.container .Image-2 {
-  background-color: rgba(0, 255, 255, 0.5); /* Cyan */
-}
-
+.Image-2 { grid-area: Image-2; }
 
 .Image-1 img, .Image-2 img {
   width: 100%;
@@ -197,23 +183,11 @@ box-sizing: border-box;
   display: block; /* Removes any gaps or extra space */
 }
 
-.article {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;     /* Centers vertically */
-  /*background-color: rgba(0, 255, 0, 0.5); /* Keep the debug color if needed */
-}
-
-.article img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Ensures the image scales while preserving its aspect ratio */
-}
 .Interactivo {
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 0px; /* Adds a 40px margin from the container border */
+  padding: 0px; /* Ensures no padding around the image */
   box-sizing: border-box;
 }
 
@@ -280,7 +254,20 @@ box-sizing: border-box;
   pointer-events: auto;
   cursor: pointer;
 }
-
+.hotspot.hotspot-1 {
+  top: 15%; 
+  left: 38%; 
+  width: 25%; 
+  height: 12%;
+  /*background-color: rgba(0, 255, 0, 0.4); /* Blue with 40% opacity */
+}
+.hotspot.hotspot-2 {
+top: 50%;
+left: 15%;
+width: 37%;
+height: 23%;
+/*background-color: rgba(0, 0, 255, 0.4); /* Blue with 40% opacity */
+}
 
 .hotspot.hotspot-1:hover ~ .interactive-image {
     opacity: 0; /* Fades out the default image */
@@ -308,18 +295,15 @@ box-sizing: border-box;
   line-height: normal;
 }
 
-.article-name{
+.article-name {
   color: #FFF;
   font-family: "Red Hat Display";
   font-size: 3rem;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
   margin: 0; /* Removes any default margin */
   line-height: 1.2; /* Adjusts line-height for spacing between lines */
-
 }
-
 
 .big-link {
   display: inline-flex; /* Aligns the text and icon horizontally */
@@ -329,10 +313,8 @@ box-sizing: border-box;
   font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-decoration-line: underline;
   margin-top: 10px; /* Adds space between the text and the link */
-
 }
 
 .big-link svg {
@@ -346,19 +328,25 @@ box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 55px;
-  margin-top: 15px;
-  padding: 0 20px; /* Adjust padding as needed */
+  flex-wrap: wrap; /* Allow wrapping for mobile */
+  height: auto; /* Height will adjust based on content */
+  padding: 15px 20px; /* Adjust padding */
   background-color: #333; /* Example background color */
   color: white;
   box-sizing: border-box;
 }
 
-.footer-left {
+/* Styles for Footer Elements */
+.footer-left  {
   display: flex;
-  gap: 20px; /* Space between elements */
+  gap: 24px; /* Space between elements */
+  flex-wrap: wrap; /* Allow wrapping for mobile */
 }
 
+.copyright-group{
+  display: flex;
+  gap: 24px;  
+}
 .footer-left a {
   text-decoration: none;
   color: white;
@@ -369,7 +357,8 @@ box-sizing: border-box;
 .footer-right {
   display: flex;
   align-items: center;
-  gap: 15px; /* Space between words and icons */
+  gap: 24px; /* Space between words and icons */
+  flex-wrap: wrap; /* Allow wrapping for mobile */
 }
 
 .footer-right span {
@@ -701,3 +690,291 @@ input[type="email"]::placeholder {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/*.・。.・゜✭・ Tablet ・✫・゜・。.*/
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  
+.Header {
+    /* Adjust the title and subtitle sizes for tablet */
+    h1 {
+        font-size: 23px; /* Title size for tablet */
+    }
+
+    h2 {
+        font-size: 17px; /* Subtitle size for tablet */
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintain three columns */
+    gap: 16px; /* Adjust the gap if needed */
+}
+
+.grid-item img {
+    width: 100%; /* Scale down images proportionally */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.interactive-image {
+    /* Adjust size or positioning for the interactive image */
+    width: 100%; /* Ensure it scales down to fit the grid */
+}
+
+.article-name {
+  color: #FFF;
+  font-family: "Red Hat Display";
+  font-size: 1.74325rem;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0; /* Removes any default margin */
+  line-height: 1.2; /* Adjusts line-height for spacing between lines */
+}
+
+.big-link {
+  display: inline-flex; /* Aligns the text and icon horizontally */
+  align-items: center; /* Vertically centers the icon with the text */
+  color: #FFF;
+  font-family: "Space Mono";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration-line: underline;
+  margin-top: 10px; /* Adds space between the text and the link */
+}
+
+.big-link svg {
+  margin-left: 20px; /* Adds space between the text and the icon */
+  fill: white; /* Ensures the icon color matches the text */
+  width: 22px; /* Adjusts icon size */
+  height: 22px; /* Adjusts icon size */
+}
+
+/* Hotspot 1 - Semi-transparent red */
+.hotspot.hotspot-1 {
+  top: 15%; left: 38%; width: 25%; height: 12%;
+  /*background-color: rgba(255, 0, 0, 0.4); /* Red with 40% opacity */
+}
+
+/* Hotspot 2 - Semi-transparent blue */
+.hotspot.hotspot-2 {
+top: 50%;
+left: 15%;
+width: 37%;
+height: 23%;
+ /* background-color: rgba(0, 0, 255, 0.4); /* Blue with 40% opacity */
+}
+.footer-left a {
+  text-decoration: none;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  margin-right: 24px; /* Adds space between links */
+  margin-bottom: 10px;
+}
+
+
+.footer-right span {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+}
+
+.footer-right a img {
+  width: 15px; /* Adjust size of the icons */
+  height: 15px;
+}
+
+}
+
+/*.・。.・゜✭・ Mobile ・✫・゜・。.*/
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: #1C160A;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+  .container {
+    width: auto;
+    height: auto;
+    
+    display: grid;
+    grid:
+      "Header Header"    /* Header spans both columns */
+      "Interactivo article"
+      "Interactivo article"
+      "Interactivo button";
+    gap: 20px;
+  }
+  .Image-1, .Image-2 {
+    display: none; /* Hide these images on mobile */
+  }
+  .Header {
+    grid-area: Header;
+       /* Adjust the title and subtitle sizes for tablet */
+    h1 {
+        font-size: 20px; /* Title size for tablet */
+    }
+
+    h2 {
+        font-size: 15px; /* Subtitle size for tablet */
+    }
+  }
+
+  .Interactivo {
+    grid-area: Interactivo;
+    background-color: #333;
+  }
+
+  .article {
+    grid-area: article;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*background-color: bisque;*/
+  }
+
+  .button {
+    grid-area: button;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px;
+   /* background-color: #ff00ff;*/
+  }
+  .empty {
+    grid-area: empty;
+    height:20px;
+    background-color: aquamarine;
+  }
+
+  .article-name {
+    color: #FFF;
+    font-family: "Red Hat Display";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0; /* Removes any default margin */
+    line-height: 1.2; /* Adjusts line-height for spacing between lines */
+  }
+  
+  .big-link {
+    display: inline-flex; /* Aligns the text and icon horizontally */
+    align-items: center; /* Vertically centers the icon with the text */
+    color: #FFF;
+    font-family: "Space Mono";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration-line: underline;
+    margin-top: 10px; /* Adds space between the text and the link */
+  }
+  
+  .big-link svg {
+    margin-left: 20px; /* Adds space between the text and the icon */
+    fill: white; /* Ensures the icon color matches the text */
+    width: 18px; /* Adjusts icon size */
+    height: 18px; /* Adjusts icon size */
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .interactive-image {
+    width: 100%;
+    height: calc(100% - 40px); /* Adjusting height for carousel controls, 40px top + 40px bottom */
+    object-fit: cover;
+    display: block;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 4px; /* Positions the dots and arrows slightly above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    padding: 5px;
+    margin: 0 5px;
+    user-select: none;
+  }
+  
+  .dots {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .dot {
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+    .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+    }
+  
+    .footer-left a {
+      margin-right: 24px; /* Adds space between links */
+      margin-bottom: 10px;
+    }
+  
+    /* Group copyright, terms, and privacy policy in a single row */
+    .footer-left .copyright-group {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+    }
+  
+    .footer-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .footer-right span {
+      margin-right: 24px; /* Adds space between text elements */
+    }
+  
+    .footer-right a img {
+      margin-left: 24px; /* Adds space between icons */
+    }
+    .footer-right a img {
+      width: 15px; /* Adjust size of the icons */
+      height: 15px;
+    }
+  
+}
+
+
+  
+
+

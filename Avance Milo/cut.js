@@ -16,5 +16,5 @@ function changeImageOnHover(hotspot, newImage) {
 }
 
 // Apply the function to each hotspot
-changeImageOnHover(hotspot1, 'media/testspot1.gif');
-changeImageOnHover(hotspot2, 'media/testspot2.gif');
+changeImageOnHover(hotspot1, 'media/lentesgif1.gif');
+changeImageOnHover(hotspot2, 'media/baggif1.gif');

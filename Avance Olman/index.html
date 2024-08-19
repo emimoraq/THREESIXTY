@@ -1,82 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="estilo.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>360</title>
-    
-    <!-- .・。.・゜✭・ Añadiendo fonts ・✫・゜・。. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-    
-<body>
-<!-- .・。.・゜✭・ Barra de navegación ・✫・゜・。. -->
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THREE SIXTY</title>
+
+    <! –– .・。.・゜✭・ Añadiendo fonts ・✫・゜・。. ––>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <! –– .・。.・゜✭・ Barra de navegación ・✫・゜・。. ––>
     <nav class="barraTop">
-        <div class="group">
-            <a href="index.html" class=itemTitle><img src="media/logoBlanco.png" alt="logo del sitio web THREE SIXTY"></a>
-        </div>
-        <div class="group">
-            <a href="index.html" class="item">log in</a>
-            <a href="index.html" class="item">register</a>
-        </div>
-    </nav>
-<!--  .・。.・゜✭・ FIN de Barra de Navegación ・✫・゜・。. -->
-    
-    <main>
-<!-- .・。.・゜✭・ Bold statement ・✫・゜・。.-->
-    <div class="boldStatement">
-        <img src="media/header.png" alt="alt text" class="centrado">
-      <div class=textoSobreImg>
-        <h3>CLOTHING IS</h3>
-        <h1><div id="texto-cambiante">SELF EXPRESSION</div></h1>
+      <div class="group">
+        <a href="index.html" class="itemTitle"
+          ><img src="media/logoBlanco.png" alt="logo del sitio web THREE SIXTY"
+        /></a>
       </div>
+      <div class="group">
+        <a href="index.html" class="item">log in</a>
+        <a href="index.html" class="item">register</a>
+      </div>
+    </nav>
+    <! –– .・。.・゜✭・ FIN de Barra de Navegación ・✫・゜・。. ––>
+
+    <main>
+      <! –– .・。.・゜✭・ Bold statement ・✫・゜・。. ––>
+      <div class="boldStatement">
+        <div class="contenedor-imagen">
+          <img src="media/header.png" alt="alt text" class="imagen_Header" />
+        </div>
+        <div class="textoSobreImg">
+          <h3>STYLE IS</h3>
+          <h1><div id="texto-cambiante">SELF EXPRESSION</div></h1>
+        </div>
         <script>
-            const textos = ["SELF EXPRESSION", "EVERYTHING", "THREE SIXTY"];
-            let indice = 0;
-            function cambiarTexto() {
-                const elemento = document.getElementById('texto-cambiante');
-                elemento.textContent = textos[indice];
-                indice = (indice + 1) % textos.length;
-            }
-            setInterval(cambiarTexto, 2000);
+          const textos = ["SELF EXPRESSION", "EVERYTHING", "THREE SIXTY"];
+          let indice = 0;
+          function cambiarTexto() {
+            const elemento = document.getElementById("texto-cambiante");
+            elemento.textContent = textos[indice];
+            indice = (indice + 1) % textos.length;
+          }
+          setInterval(cambiarTexto, 2000);
         </script>
-    </div>
-<!--  .・。.・゜✭・ FIN de Bold statement ・✫・゜・。. -->
+      </div>
+      <! –– .・。.・゜✭・ FIN de Bold statement ・✫・゜・。. ––>
 
 <!--  .・。.・゜✭・ Trio de texto + img ・✫・゜・。. -->
-    <div class="container">
-        <div class="textColumnLeft">
-            <div class="group">
-                <h2>DISCOVER</h2>
-                <h4>NEW TRENDS</h4>
-            </div>
-            
-            <a class="enlace" href="index.html">
-                <div class="group">
-                    <h5>log in</h5>
-                    <img src="media/flechaEnlace.png" alt="Flecha que señaliza enlace">
-                </div>
-            </a>  
-        </div>
-    <div class="imageColumnLeft">
-        <img src="media/img1.png" alt="Descripción de la imagen">
+   
+<div class="imagenes-con-texto">
+    <div class="imagen-texto derecha"> 
+        <img src="media/img3.png" alt="Descripción de la imagen 1" class="imagen">
+        <h1 class="article-name2">DISCOVER</p>
+        <p class="article-name4">NEW TRENDS</p> <!-- Segunda linea -->
+        <p class="article-name6">EXPLORE</p> <!-- Tercera linea -->
+        
+        <!-- <hr class="estilolinea">-->
+        
+    </div>
+    <div class="imagen-texto izquierda">
+        <img src="media/img4.png" alt="Descripción de la imagen 2" class="imagen">
+        <h2 class="article-name3">FIND</p>
+        <p class="article-name5">YOUR STYLE</p> <!-- Segunda linea -->
+        <p class="article-name7">COLLECTIONS</p> <!-- Tercera linea -->
+    </div>
+    <div class="imagen-texto derecha">
+        <img src="media/img5.png" alt="Descripción de la imagen 3" class="imagen">
+        <h1 class="article-name2">BUILD</p>
+        <p class="article-name4">YOUR DREAM FIT</p> <!-- Segunda linea -->
+        <p class="article-name6">OUTFIT BUILDER</p> <!-- Tercera linea -->
     </div>
 </div>
         
 <!--  .・。.・゜✭・ FIN de Trio de texto + img ・✫・゜・。. -->
-  
 
+<!-- SOCIALS -->
+<section class="seccion-fotografias">
+    <h2 class="titulo-fotografias">explore what other people are wearing</h2>
+    <div class="galeria">
+        <div class="foto">
+            <img src="media/insta1.png" alt="Descripción de la fotografía 1">
+        </div>
+        <div class="foto">
+            <img src="media/insta2.png" alt="Descripción de la fotografía 2">
+        </div>
+        <div class="foto">
+            <img src="media/insta3.png" alt="Descripción de la fotografía 3">
+        </div>
+    </div>
+</section>
+<!-- FIN SOCIALS -->
+
+<!-- LOGO -->
+<section class="imagen-centrada">
+    <img src="media/logoblanco2.png" alt="Descripción de la imagen centrada">
+</section>
+<!-- FIN LOGO -->
 
 <!--  .・。.・゜✭・ Outfit inspiration ・✫・゜・。. -->    
 
@@ -136,27 +176,100 @@
   
 
 </div>
+<!--  .・。.・゜✭・ FIN Outfit inspiration ・✫・゜・。. -->  
 
+<! –– .・。.・゜✭・ Sign Up ・✫・゜・。. ––>
+      <div class="preSignUp"><h4>JOIN THE THREE SIXTY CLUB</h4></div>
 
-</main>
+      <section class="layout">
+        <div class="imagenSignUp">
+          <img
+            src="media/imgSignUp.png"
+            alt="Black and white image of a man with a mustache and sun glasses over a plain white background"
+          />
+        </div>
+
+        <div class="formSignUp">
+          <div class="itemTitle">
+            <img
+              src="media/logoBlanco.png"
+              alt="logo del sitio web THREE SIXTY"
+            />
+          </div>
+
+          <div class="incitingStatement">
+            <div class="h4fontAlt">SIGN UP</div>
+            <div><h4>AND NEVER MISS A BEAT</h4></div>
+          </div>
+
+          <button class="botonIcono">
+            <span class="elemento-izquierda"
+              ><img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cc7c7b48eacd3c337326c01fa56fb58d0c785e31282d29ecefc520e5a79776d?placeholderIfAbsent=true&apiKey=d21bf5150901427d88a3f70d8a0a395f"
+                alt="Google logo"
+            /></span>
+            <span class="elemento-centro">Continue using Google</span>
+          </button>
+
+          <div class="separador">or</div>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="stylish@email.com"
+          />
+
+          <button id="submit-btn" disabled>Continue with email</button>
+          <script>
+            const emailInput = document.getElementById("email");
+            const submitBtn = document.getElementById("submit-btn");
+
+            function validateEmail(email) {
+              const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return re.test(email);
+            }
+
+            emailInput.addEventListener("input", function () {
+              if (validateEmail(this.value)) {
+                submitBtn.disabled = false;
+              } else {
+                submitBtn.disabled = true;
+              }
+            });
+          </script>
+
+          <div class="terms-agreement">
+            By singing up you agree to our
+            <span class="terms-link" tabindex="0">Terms of Use</span>,
+            <span class="terms-link" tabindex="0">Privacy Notice</span>
+            and
+            <span class="terms-link" tabindex="0">Cookie Notice</span>.
+          </div>
+        </div>
+      </section>
+
+<! –– .・。.・゜✭・ FIN de Sign Up ・✫・゜・。. ––>
+    </main>
+
     <footer class="footer-container">
-            <div class="footer-left">
-                <a href="#">THREE SIXTY</a>
-                <a href="#">© 2024</a>
-                <a href="#">Privacy policy</a>
-                <a href="#">Terms & Conditions</a>
-            </div>
-            <div class="footer-right">
-                <span>About</span>
-                <span>Careers</span>
-                <span>Contact</span>
-                <span>Press</span>
-                <a href="#"><img src="media/IG.svg" alt="Icon 1"></a>
-                <a href="#"><img src="media/FACEBOOK.svg" alt="Icon 2"></a>
-                <a href="#"><img src="media/X.svg" alt="Icon 3"></a>
-            </div>
-        </footer>
-        
-    <script src="cutbutton.js"></script>
-</body>
+        <div class="footer-left">
+            <a href="#">THREE SIXTY</a>
+            <a href="#">© 2024</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="footer-right">
+            <span>About</span>
+            <span>Careers</span>
+            <span>Contact</span>
+            <span>Press</span>
+            <a href="#"><img src="media/IG.svg" alt="Icon 1"></a>
+            <a href="#"><img src="media/FACEBOOK.svg" alt="Icon 2"></a>
+            <a href="#"><img src="media/X.svg" alt="Icon 3"></a>
+        </div>
+    </footer>
+    
+<script src="cut.js"></script>
+  </body>
 </html>

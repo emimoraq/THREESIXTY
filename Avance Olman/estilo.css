@@ -109,7 +109,7 @@ box-sizing: border-box;
 
 .imagen_Header {
   width: 100%;
-  height: 100%;
+  height: 90vh;
   object-fit: cover;
   object-position: center;
 }
@@ -697,13 +697,90 @@ input[type="email"]::placeholder {
 .Header {
     /* Adjust the title and subtitle sizes for tablet */
     h1 {
-        font-size: 23px; /* Title size for tablet */
+        font-size: 24px; /* Title size for tablet */
     }
 
     h2 {
-        font-size: 17px; /* Subtitle size for tablet */
+        font-size: 18px; /* Subtitle size for tablet */
     }
+  }
+
+h1 {
+ font-size: 48px;
 }
+
+h2{
+ font-size: 32px;
+}
+
+    h3{
+      font-size: 32px;
+    }
+
+    h4{
+      font-size: 16px;
+    }
+
+    .h4fontAlt{
+      font-size: 16px;
+    }
+
+    .barraTop{
+      padding: 25px 5% 25px 5%;
+    }
+    
+     .item {
+      font-size: 16px;
+      padding: 0px 14px 0px 14px;
+     }
+    
+.textoSobreImg{
+  padding-left: 5%;
+}
+
+    .imagen_Header{
+      height: 88vh;
+      object-position: center;
+    }
+
+  .layout{
+    flex-direction: column; /* Para alinear los elementos en columna (verticalmente) */
+    justify-content: center; /* Para centrar los elementos verticalmente */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .formSignUp{
+    grid-row-gap: 14px;
+    padding-right: 10%;
+  }
+
+  .botonIcono{
+    padding: 11px 14px 11px 14px ;
+    border: 1.5px solid white;
+    font-size: 14px;
+  }
+
+  .separador{
+    font-size: 14px;
+  }
+
+  input[type="email"] {
+    padding: 11px 14px 11px 14px ;
+    border: 1.5px solid white;
+    font-size: 14px;
+  }
+
+#submit-btn {
+    padding: 11px 14px 11px 14px ;
+    border: 1.5px solid white;
+    font-size: 14px;
+}
+
+  .terms-agreement{
+    font-size: 12px;
+  }
+
 
 .grid-container {
     display: grid;
@@ -794,10 +871,10 @@ height: 23%;
     padding: 0;
     overflow-x: hidden;
 }
+
   .container {
     width: auto;
     height: auto;
-    
     display: grid;
     grid:
       "Header Header"    /* Header spans both columns */
@@ -809,6 +886,7 @@ height: 23%;
   .Image-1, .Image-2 {
     display: none; /* Hide these images on mobile */
   }
+
   .Header {
     grid-area: Header;
        /* Adjust the title and subtitle sizes for tablet */
@@ -820,6 +898,84 @@ height: 23%;
         font-size: 15px; /* Subtitle size for tablet */
     }
   }
+
+  h1{
+    font-size: 32px;
+  }
+
+    h3{
+      font-size: 20px;
+    }
+
+    h4{
+      font-size: 14px;
+    }
+
+    .h4fontAlt{
+      font-size: 14px;
+    }
+
+    .barraTop{
+      padding: 5% 5% 5% 5%;
+      flex-direction: column; /* Para alinear los elementos en columna (verticalmente) */
+      justify-content: left; /* Para centrar los elementos verticalmente */
+      align-items: left;
+      gap: 10px;
+    }
+    
+     .item {
+      font-size: 14px;
+      padding: 0px 12px 0px 12px;
+     }
+    
+    .imagen_Header{
+      height: 85vh;
+      width: auto;
+    }
+
+    .textoSobreImg{
+      top: 85%;
+      padding-left: 5%;
+    }
+
+  .layout{
+    display: flex;
+    flex-direction: column; /* Para alinear los elementos en columna (verticalmente) */
+    justify-content: center; /* Para centrar los elementos verticalmente */
+    align-items: center;
+    gap: 25px;
+  }
+
+  .formSignUp{
+    padding: 30px 5% 30px 5%;
+  }
+
+  .botonIcono{
+    padding: 10px 12px 10px 12px ;
+    border: 1px solid white;
+    font-size: 12px;
+  }
+
+  .separador{
+    font-size: 12px;
+  }
+
+  input[type="email"] {
+    padding: 10px 12px 10px 12px ;
+    border: 1px solid white;
+    font-size: 12px;
+  }
+
+#submit-btn {
+    padding: 10px 12px 10px 12px ;
+    border: 1px solid white;
+    font-size: 12px;
+}
+
+  .terms-agreement{
+    font-size: 10px;
+  }
+
 
   .Interactivo {
     grid-area: Interactivo;

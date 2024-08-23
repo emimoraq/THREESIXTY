@@ -371,164 +371,233 @@ height: 23%;
   height: 20px;
 }
 
+
 /* SECCION DE TRES IMGS */
+/* Diseño general con CSS Grid */
 .imagenes-con-texto {
-  display: flex;
-  flex-direction: column; /* Apila las filas verticalmente */
-  gap: 0; /* Sin espacio entre las filas de imagen-texto */
+  display: grid;
+  gap: 0px; /* Espacio entre filas */
   margin-top: 50px; /* Espacio entre la sección anterior y esta sección */
+  grid-template-columns: 1fr; /* Una columna por defecto */
 }
 
+/* Contenedor de la imagen y el texto */
 .imagen-texto {
   display: flex;
-  align-items: center; /* Centra verticalmente el texto con respecto a la imagen */
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  position: relative; /* Necesario para la posición absoluta del texto en móviles */
+  align-items: center; /* Alinea el contenido verticalmente */
 }
 
-.imagen-texto.izquierda {
-  flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
-  text-indent: 280px;
-}
-
-.imagen-texto.derecha {
-  flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
-  text-indent: -480px;
-
-}
-
+/* Imágenes */
 .imagen {
-  width: 60vw; /* Ocupa mas de la mitad del ancho de la ventana */
-  height: auto; /* Mantiene la proporcion de la imagen */
+  width: 100%; /* La imagen ocupa el 100% del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
+/* Texto en el contenedor de imagen-texto */
 .texto {
-  flex: 1; /* Ocupa el espacio restante */
+  display: flex;
+  align-items: center; /* Centra verticalmente el texto con respecto a la imagen */
+  justify-content: center; /* Centra horizontalmente el texto dentro de su contenedor */
   text-align: center; /* Centra el texto horizontalmente */
-  font-size: 1rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  height: 100%; /* Asegura que el texto ocupe todo el alto disponible */
+  padding-left: 60px; /* Espacio interno */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
-.article-name2{
+/* Estilo de los elementos de texto */
+.article-name2,
+.article-name3 {
   color: #FFF;
   font-family: "Red Hat Display";
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin: 0; /* Removes any default margin */
-  line-height: 0; /* Adjusts line-height for spacing between lines */
-  padding: 70px;
-  text-align: left;
-
-}
-
-.article-name3{
-  color: #FFF;
-  font-family: "Red Hat Display";
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin: 0; /* Removes any default margin */
-  line-height: 0; /* Adjusts line-height for spacing between lines */
-  padding: 40px;
-  text-align: right;
-
-}
-.article-name4{
-  color: #FFF;
-  font-family: "Space Grotesk";
   font-size: 2rem;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin: 0; /* Removes any default margin */
-  line-height: 0; /* Adjusts line-height for spacing between lines */
-  padding: 0px;
-  text-align: left;
-
+  font-weight: 700;
+  margin: 30;
+  line-height: 20%;
+ /* background-color: black; */
 }
 
-.article-name5{
-  color: #FFF;
-  font-family: "Space Grotesk";
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin: 0; /* Removes any default margin */
-  line-height: 0; /* Adjusts line-height for spacing between lines */
-  padding: 0px;
-  text-align: right;
-
-}
-
-.article-name6{
+.article-name4,
+.article-name5 {
   color: #FFF;
   font-family: "Space Grotesk";
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  margin: 0; /* Removes any default margin */
-  line-height: 8; /* Adjusts line-height for spacing between lines */
-  padding: 0px;
-  text-align: left;
-  text-decoration: underline;
-
+  margin: 50;
+  line-height: 10%
 }
 
-.article-name7{
+.article-name6,
+.article-name7 {
   color: #FFF;
   font-family: "Space Grotesk";
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
-  margin: 0; /* Removes any default margin */
-  line-height: 8; /* Adjusts line-height for spacing between lines */
-  padding: 0px;
-  text-align: right;
+  margin: 0;
   text-decoration: underline;
-
+  line-height: 250%;
 }
-/* .estilolinea{
-  border: 0.5px;
-  height: 0;
-  width: 10px;
-  background-color: #FFF;
-  
-}*/
+
+/* Diseño específico para desktop */
+@media (min-width: 1024px) {
+  .imagenes-con-texto {
+    grid-template-columns: 1fr; /* Una columna de filas */
+  }
+
+  .imagen-texto {
+    width: 100%;
+  }
+
+  .imagen-texto.derecha {
+    flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
+  }
+
+  .imagen-texto.izquierda {
+    flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+  }
+
+  .imagen {
+    width: 50vw; /* Ocupa la mitad del ancho de la ventana */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+  }
+
+  .article-name2,
+  .article-name3 {
+    font-size: 4rem; /* Tamaño más grande para desktop */
+  }
+
+  .article-name4,
+  .article-name5 {
+    font-size: 2rem; /* Tamaño más grande para desktop */
+  }
+
+  .article-name6,
+  .article-name7 {
+    font-size: 1.5rem; /* Tamaño más grande para desktop */
+  }
+}
+
+/* Diseño específico para tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .imagenes-con-texto {
+    grid-template-columns: 1fr; /* Una columna de filas */
+  }
+
+  .imagen-texto {
+    width: 100%;
+  }
+
+  .imagen-texto.derecha {
+    flex-direction: row-reverse; /* Imagen a la derecha, texto a la izquierda */
+  }
+
+  .imagen-texto.izquierda {
+    flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+  }
+
+  .imagen {
+    width: 50vw; /* Ocupa la mitad del ancho de la ventana */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+  }
+
+  .article-name2,
+  .article-name3 {
+    font-size: 3rem; /* Tamaño ajustado para tablet */
+  }
+
+  .article-name4,
+  .article-name5 {
+    font-size: 1.5rem; /* Tamaño ajustado para tablet */
+  }
+
+  .article-name6,
+  .article-name7 {
+    font-size: 1.2rem; /* Tamaño ajustado para tablet */
+  }
+}
+
+/* Diseño específico para celular */
+@media (max-width: 767px) {
+  .imagenes-con-texto {
+    grid-template-columns: 1fr; /* Una columna de filas */
+  }
+
+  .imagen-texto {
+    flex-direction: column; /* Imagen y texto en una sola columna */
+    position: relative; /* Necesario para la posición absoluta del texto */
+  }
+
+  .imagen {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+  }
+
+  .texto {
+    position: absolute; /* Posiciona el texto sobre la imagen */
+    bottom: 10px; /* Alinea el texto en la parte inferior */
+    left: 0; /* Alinea el texto a la izquierda */
+    width: 100%; /* Ancho del texto igual al ancho de la imagen */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    color: #FFF; /* Color del texto */
+    padding: 5%;
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+
+  .article-name2,
+  .article-name3 {
+    font-size: 2rem; /* Tamaño ajustado para celular */
+  }
+
+  .article-name4,
+  .article-name5 {
+    font-size: 1.2rem; /* Tamaño ajustado para celular */
+  }
+
+  .article-name6,
+  .article-name7 {
+    font-size: 1rem; /* Tamaño ajustado para celular */
+  }
+}
+
+
 
 /* SOCIALS */
-  .seccion-fotografias {
+
+.seccion-fotografias {
   padding: 70px 0; /* Espacio superior e inferior */
-  text-align: right; /* Centra el título y el contenido */
-  margin-top: 50px; /* Espacio entre la sección anterior y esta sección */
+  text-align: center; /* Centra el título y el contenido */
+  margin-top: 5%; /* Espacio entre la sección anterior y esta sección */
 }
 
 .titulo-fotografias {
   color: #FFF;
   font-family: "Space Mono", sans-serif;
-  font-size: 36px;
-  margin-bottom: 15px; /* Espacio debajo del título */
-  margin: 50px; /* Removes any default margin */
-  font-style: light;
+  font-size: 150%;
+  margin-bottom: 20%; /* Espacio debajo del título */
+  margin: 4%; /* Removes any default margin */
+  font-style: normal;
+  text-align: right;
   
 }
 
 .galeria {
   display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se envuelvan en líneas si es necesario */
   justify-content: center; /* Centra las fotos horizontalmente */
-  gap: 20px; /* Espacio entre las fotos */
+  gap: 2%; /* Espacio entre las fotos */
 }
 
 .foto {
-  width: 450px; /* Ajusta según sea necesario */
-  height: 550px; /* Ajusta según sea necesario */
+  width: 30%; /* Ajusta el tamaño según sea necesario */
+  height: auto; /* Permite que la altura se ajuste proporcionalmente */
   overflow: hidden; /* Oculta partes de la imagen que se salen del contenedor */
+  margin-bottom: 20px; /* Espacio inferior entre las imágenes */
 }
 
-.foto img {
+.foto img { 
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionarse */
@@ -556,18 +625,37 @@ height: 23%;
   font-size: 14px; 
 }        
 
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .galeria {
+    flex-direction: column; /* Dispone las imágenes en columna en lugar de fila */
+    align-items: center; /* Centra las imágenes horizontalmente */
+  }
+
+  .foto {
+    width: 70%; /* Ajusta el tamaño de las imágenes en dispositivos móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .foto {
+    width: 100%; /* Imágenes ocupan todo el ancho en pantallas muy pequeñas */
+  }
+}
+
 
 
 /* LOGO */
 .imagen-centrada {
-  padding: 40px 0; /* Espacio superior e inferior para separación */
+  padding: 10px 0; /* Espacio superior e inferior para separacion */
   text-align: center; /* Centra la imagen horizontalmente */
-}
+} 
 
 .imagen-centrada img {
   max-width: 50%; /* Asegura que la imagen no se desborde */
-  height: auto; /* Mantiene la proporción de la imagen */
+  height: auto; /* Mantiene la proporcion de la imagen */
 }
+/* fin LOGO */
 
 .preSignUp{
   display: flex;
@@ -611,7 +699,7 @@ height: 23%;
 .botonIcono {
   display: flex;
   align-items: center;
-  width: auto; /* Ajusta según necesites */
+  width: auto; /* Ajusta segun necesites */
   padding: 12px 16px 12px 16px ;
   border: 2px solid white;
   font-family: "Space Grotesk", sans-serif;
